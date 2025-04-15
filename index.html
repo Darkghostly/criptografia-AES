@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criptografia AES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>🔒 Criptografia AES</h2>
+      <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+      <input type="text" id="chave" placeholder="Digite a chave (16, 24 ou 32 caracteres)" />
+      <button onclick="criptografar()">Criptografar</button>
+      <textarea id="resultadoCriptografia" placeholder="Resultado..." readonly></textarea>
+      <p class="msg" id="msgCripto"></p>
+    </div>
+
+    <div class="box">
+      <h2>🔓 Descriptografia AES</h2>
+      <textarea id="mensagemCriptografada" placeholder="Digite a mensagem criptografada"></textarea>
+      <input type="text" id="chaveDescriptografia" placeholder="Digite a chave" />
+      <button onclick="descriptografar()">Descriptografar</button>
+      <textarea id="resultadoDescriptografia" placeholder="Resultado..." readonly></textarea>
+      <p class="msg" id="msgDescripto"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
